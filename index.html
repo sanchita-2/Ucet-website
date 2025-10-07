@@ -1,496 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>University College of Engineering and Technology</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University College of Engineering and Technology</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  
 </head>
-<body class="bg-gray-50">
-    <!-- Header & Navigation -->
-    <header class="bg-white shadow-lg sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center">
-                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-3">
-                     <img src="ucet logo.png">
-                    </div>
-                    <div>
-                        <h1 class="heading-font font-bold text-xl text-blue-800">UCET</h1>
-                        <p class="text-xs text-gray-600">University College of Engineering & Technology</p>
-                    </div>
-                </div>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
 
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-lightgrey-600 font-medium hover:text-blue-800 transition-colors">Home</a>
-                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors">About</a>
-                    <a href="#programs" class="text-gray-700 hover:text-blue-600 transition-colors">Programs</a>
-                    <a href="#facilities" class="text-gray-700 hover:text-blue-600 transition-colors">Facilities</a>
-                    <a href="#news" class="text-gray-700 hover:text-blue-600 transition-colors">News</a>
-                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
-                </div>
+  <!-- Navbar -->
+  <header class="bg-white dark:bg-gray-800 shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
+      <a href="#home" class="flex items-center space-x-3">
+        <img src="logo.png" alt="UCET Logo" class="h-10 w-10">
+        <span class="text-xl font-bold text-blue-900 dark:text-white">UCET</span>
+      </a>
 
-                <div class="flex items-center space-x-4">
-                   
-                    <button class="md:hidden text-gray-700">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
-        </nav>
-    </header>
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex space-x-6 font-medium items-center">
+        <a href="#home" class="hover:text-blue-600">Home</a>
+        <a href="#about" class="hover:text-blue-600">About</a>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-gradient text-white">
-        <div class="container mx-auto px-6 py-20">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h1 class="heading-font text-4xl md:text-5xl font-bold mb-6">
-                        Shaping Tomorrow's <br>
-                        <span class="text-yellow-300">Engineering Leaders</span>
-                    </h1>
-                    <p class="text-xl mb-8 text-blue-100">
-                        Excellence in engineering education, innovation, and research since 2009. 
-                        Join our community of future innovators and problem solvers.
-                    </p>
-                   
-                </div>
-                <div class="relative">
-                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                        <img src="ucet home.jpg">
-                    </div>
-                    <div class="absolute -bottom-6 -left-6 bg-yellow-400 text-blue-900 p-4 rounded-xl shadow-xl">
-                        <div class="text-center">
-                            <div class="text-2xl font-bold">1500+</div>
-                            <div class="text-sm">Current Students</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Departments Dropdown -->
+        <div class="relative group">
+          <button class="dropdown-btn hover:text-blue-600 focus:outline-none">Departments ▾</button>
+          <div class="absolute left-0 mt-2 w-56 bg-white dark:bg-gray-800 shadow-lg rounded hidden group-hover:block">
+            <a href="#departments" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Computer Science</a>
+            <a href="#departments" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Electrical Engineering</a>
+            <a href="#departments" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Mechanical Engineering</a>
+            <a href="#departments" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Information Technology</a>
+            <a href="#departments" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">AI & ML</a>
+          </div>
         </div>
-    </section>
 
-    <!-- Stats Section -->
-    <section class="bg-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                 <div class="absolute -left-6 bg-yellow-400 text-blue-900 p-4 rounded-xl shadow-xl">
-                        <div class="text-center">
-                            <div class="text-2xl font-bold">25+</div>
-                            <div class="text-sm">  faculty members</div>
-                    
-                    <div class="counter-number" data-target="500+">0</div>
-                    <p class="text-blue-600">  Alumni Network</p>
-                </div>
-                
-            </div>
+        <!-- Resources Dropdown -->
+        <div class="relative group">
+          <button class="dropdown-btn hover:text-blue-600 focus:outline-none">Resources ▾</button>
+          <div class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 shadow-lg rounded hidden group-hover:block">
+            <a href="#resources" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Library</a>
+            <a href="#resources" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Labs</a>
+            <a href="https://nptel.ac.in" target="_blank" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">NPTEL/SWAYAM</a>
+          </div>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="heading-font text-3xl md:text-4xl font-bold text-gray-800 mb-4">About UCET</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Premier institution dedicated to excellence in engineering education, research, and innovation.
-                </p>
-            </div>
+        <a href="login.html" class="hover:text-blue-600">Login</a>
+        <button id="theme-toggle" class="px-3 py-1 rounded bg-gray-200 dark:bg-gray-700">🌙</button>
+      </nav>
 
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <img src="ucet campus.jpg"/>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Our Legacy of Excellence</h3>
-                    <p class="text-gray-600 mb-6">
-                        Established in 2009, University College of Engineering and Technology is committed to nurturing talent and building strong technical foundation, we provide a supportive environment where students can explore,experiment and grow.
-                    </p>
-                    <p class="text-gray-600 mb-8">
-                        Our state-of-the-art facilities, experienced faculty, and industry partnerships ensure 
-                        that our students receive a top-class education that prepares them for the challenges 
-                        of tomorrow.
-                    </p>
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                                <i class="fas fa-trophy text-blue-600"></i>
-                            </div>
-                            <div>
-                                <div class="font-semibold">NAAC Accredited</div>
-                                
-                            </div>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                                <i class="fas fa-industry text-blue-600"></i>
-                            </div>
-                            <div>
-                                <div class="font-semibold">Alumni from</div>
-                                <div class="text-sm text-gray-600">50+ Companies</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden flex items-center">
+        <button id="menu-toggle" class="focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-6 pb-6">
+      <a href="#home" class="block py-2">Home</a>
+      <a href="#about" class="block py-2">About</a>
+
+      <!-- Departments -->
+      <details class="py-2">
+        <summary class="cursor-pointer">Departments</summary>
+        <a href="#departments" class="block pl-4 py-1">Computer Science</a>
+        <a href="#departments" class="block pl-4 py-1">Electrical Engineering</a>
+        <a href="#departments" class="block pl-4 py-1">Mechanical Engineering</a>
+        <a href="#departments" class="block pl-4 py-1">Information Technology</a>
+        <a href="#departments" class="block pl-4 py-1">AI & ML</a>
+      </details>
+
+      <!-- Resources -->
+      <details class="py-2">
+        <summary class="cursor-pointer">Resources</summary>
+        <a href="#resources" class="block pl-4 py-1">Library</a>
+        <a href="#resources" class="block pl-4 py-1">Labs</a>
+        <a href="https://nptel.ac.in" target="_blank" class="block pl-4 py-1">NPTEL/SWAYAM</a>
+      </details>
+
+      <a href="login.html" class="block py-2">Login</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative h-[400px] flex items-center justify-center bg-cover bg-center" style="background-image: url('college-banner.jpg');">
+    <div class="bg-black bg-opacity-50 p-6 rounded text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-white">
+        University College of Engineering and Technology
+      </h1>
+      <p class="mt-2 text-lg text-gray-200">Founded in 2009</p>
+    </div>
+  </section>
+
+  <!-- News Section -->
+  <section id="news" class="py-16 bg-gray-100 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Latest News</h2>
+      <div class="grid gap-8 md:grid-cols-3">
+
+        <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Mid-term Exams 2025</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-2">Exam schedules for all departments have been released. Please check your emails for details.</p>
+          <span class="text-sm text-gray-500 dark:text-gray-400">Sep 10, 2025</span>
         </div>
-    </section>
 
-    <!-- Programs Section -->
-    <section id="programs" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="heading-font text-3xl md:text-4xl font-bold text-gray-800 mb-4">Academic Programs</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Comprehensive engineering programs designed to meet industry demands and foster innovation.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Program Card 1 -->
-                <div class="program-card bg-white rounded-2xl p-6 shadow-lg border border-gray-100 transition-all duration-300">
-                    <div class="facility-icon mx-auto">
-                        <i class="fas fa-laptop-code text-blue-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Computer Science and information technology</h3>
-                    <p class="text-gray-600 mb-6 text-center">
-                        Cutting-edge curriculum in software development, AI, and data science.
-                    </p>
-                    <ul class="space-y-2 mb-6">
-                       
-                        <li class="flex items-center text-sm text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            Industry Internships
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            Research Opportunities
-                        </li>
-                         <li class="flex items-center text-sm text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                           Dedicated faculties
-                        </li>
-                    </ul>
-                    <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                        Learn More
-                    </button>
-                </div>
-
-                <!-- Program Card 2 -->
-                <div class="program-card bg-white rounded-2xl p-6 shadow-lg border border-gray-100 transition-all duration-300">
-                    <div class="facility-icon mx-auto">
-                        <i class="fas fa-bolt text-blue-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Electronics and communication Engineering</h3>
-                    <p class="text-gray-600 mb-6 text-center">
-                        Advanced programs in power systems, electronics, and telecommunications.
-                    </p>
-                    <ul class="space-y-2 mb-6">
-                        <li class="flex items-center text-sm text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            Modern Labs & Equipment
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            Dedicated faculties
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            Hands-on Projects
-                        </li>
-                    </ul>
-                    <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                        Learn More
-                    </button>
-                </div>
-
-                <!-- Program Card 3 -->
-                <div class="program-card bg-white rounded-2xl p-6 shadow-lg border border-gray-100 transition-all duration-300">
-                    <div class="facility-icon mx-auto">
-                        <i class="fas fa-cogs text-blue-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Mechanical Engineering</h3>
-                    <p class="text-gray-600 mb-6 text-center">
-                        Comprehensive training in design, manufacturing, and thermal sciences.
-                    </p>
-                    <ul class="space-y-2 mb-6">
-                        <li class="flex items-center text-sm text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            CAD/CAM Facilities
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                           Dedicated faculties
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            Industry Projects
-                        </li>
-                    </ul>
-                    <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                        Learn More
-                    </button>
-                </div>
-            </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">AI & ML Workshop</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-2">A 3-day workshop on Artificial Intelligence & Machine Learning will be conducted by industry experts.</p>
+          <span class="text-sm text-gray-500 dark:text-gray-400">Sep 5, 2025</span>
         </div>
-    </section>
 
-    <!-- Facilities Section -->
-    <section id="facilities" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="heading-font text-3xl md:text-4xl font-bold text-gray-800 mb-4">Campus Facilities</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    World-class infrastructure to support academic excellence and student development.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Facility 1 -->
-                <div class="bg-white rounded-2xl p-6 shadow-lg">
-                    <div class="mb-6">
-                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0ddd5bee-52f0-4cc2-bc50-bc085a537c04.png" alt="Modern library interior with students studying at tables surrounded by bookshelves and natural light" class="rounded-xl w-full h-48 object-cover" />
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Central Library</h3>
-                    <p class="text-gray-600 mb-4">
-                        50,000+ volumes, digital resources, and quiet study spaces for academic success.
-                    </p>
-                    <div class="flex items-center text-sm text-blue-600">
-                        <i class="fas fa-clock mr-2"></i>
-                        Open 10AM to 5:00pm
-                    </div>
-                </div>
-
-                <!-- Facility 2 -->
-                <div class="bg-white rounded-2xl p-6 shadow-lg">
-                    <div class="mb-6">
-                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/342fc9b0-8311-4b08-8f46-5a93f25bc1c3.png" alt="State-of-the-art computer lab with rows of modern workstations and students collaborating" class="rounded-xl w-full h-48 object-cover" />
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Computer Labs</h3>
-                    <p class="text-gray-600 mb-4">
-                        High-performance computing facilities with latest software and hardware resources.
-                    </p>
-                    <div class="flex items-center text-sm text-blue-600">
-                        <i class="fas fa-wifi mr-2"></i>
-                        Gigabit Internet
-                    </div>
-                </div>
-
-                <!-- Facility 3 -->
-                <div class="bg-white rounded-2xl p-6 shadow-lg">
-                    <div class="mb-6">
-                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6f4c9fdd-b523-4356-8390-df5c6c7d451f.png" alt="Modern sports complex with basketball court, running track, and fitness equipment" class="rounded-xl w-full h-48 object-cover" />
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3"> University Sports Complex</h3>
-                    <p class="text-gray-600 mb-4">
-                        Comprehensive sports facilities including gym, courts, and fields for student wellness inside university campus
-                    </p>
-                    <div class="flex items-center text-sm text-blue-600">
-                        <i class="fas fa-dumbbell mr-2"></i>
-                        Fitness Programs
-                    </div>
-                </div>
-            </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Alumni Meet 2025</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-2">Join us for the annual alumni meet to reconnect and network with our esteemed alumni community.</p>
+          <span class="text-sm text-gray-500 dark:text-gray-400">Aug 28, 2025</span>
         </div>
-    </section>
 
-    <!-- News & Events -->
-    <section id="news" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="heading-font text-3xl md:text-4xl font-bold text-gray-800 mb-4">News & Events</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Stay updated with the latest happenings at University College of Engineering and Technology.
-                </p>
-            </div>
+      </div>
+    </div>
+  </section>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- News 1 -->
-                <div class="news-card bg-white rounded-2xl overflow-hidden shadow-lg">
-                  
-                    <div class="p-6">
-                        <div class="text-sm text-blue-600 mb-2">aug 2025</div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">independence day celebration</h3>
-                        <p class="text-gray-600 mb-4">
-                            we celebrated 79th independence in university  ground in presence of our respected vc sir and other respected chief guests.ucet student participated in rally and jhanki with all their love and respect to nation .
-                        </p>
-                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 flex items-center">
-                            Read More
-                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                        </a>
-                    </div>
-                </div>
+  <!-- About Section -->
+  <section id="about" class="py-16">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">About UCET</h2>
+      <p class="text-lg leading-relaxed">
+        UCET is a premier engineering college founded in 2009. We focus on innovation, research, and excellence in technical education.
+      </p>
+    </div>
+  </section>
 
-                <!-- News 2 -->
-                <div class="news-card bg-white rounded-2xl overflow-hidden shadow-lg">
-                    
-                    <div class="p-6">
-                        <div class="text-sm text-blue-600 mb-2">may 2025</div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Industry Collaboration </h3>
-                        <p class="text-gray-600 mb-4">
-                            companies like Myntra and MRF visied our campus for on campus hiring.
-                        </p>
-                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 flex items-center">
-                            Read More
-                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                        </a>
-                    </div>
-                </div>
-
-              
-            </div>
+  <!-- Departments Section -->
+  <section id="departments" class="py-16 bg-gray-100 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Departments</h2>
+      <div class="grid gap-8 md:grid-cols-3">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">Computer Science</h3>
+          <p>Cutting-edge curriculum in AI, ML, Cybersecurity, and Full Stack Development.</p>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-900 text-white">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12">
-                <div>
-                    <h2 class="heading-font text-3xl md:text-4xl font-bold mb-6">Get In Touch</h2>
-                    <p class="text-xl text-gray-300 mb-8">
-                        Ready to start your engineering journey? Contact us for more information.
-                    </p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <div class="font-semibold">Address</div>
-                                <div class="text-gray-300">Ucet,Vinoba bhave university,sindoor,Hazaribag,Jharkhand,825319</div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div>
-                                <div class="font-semibold">Phone</div>
-                                <div class="text-gray-300"> 123-4567</div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <div class="font-semibold">Email</div>
-                                <div class="text-gray-300">admissions@ucet.edu</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <form class="bg-gray-800 p-8 rounded-2xl">
-                        <h3 class="text-2xl font-bold mb-6">Send us a Message</h3>
-                        <div class="space-y-4">
-                            <div>
-                                <input type="text" placeholder="Your Name" class="w-full bg-gray-700 text-white px-4 py-3 rounded-lg border border-gray-600 focus:border-blue-500 focus:outline-none">
-                            </div>
-                            <div>
-                                <input type="email" placeholder="Your Email" class="w-full bg-gray-700 text-white px-4 py-3 rounded-lg border border-gray-600 focus:border-blue-500 focus:outline-none">
-                            </div>
-                            <div>
-                                <textarea placeholder="Your Message" rows="4" class="w-full bg-gray-700 text-white px-4 py-3 rounded-lg border border-gray-600 focus:border-blue-500 focus:outline-none"></textarea>
-                            </div>
-                            <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                                Send Message
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">Electrical Engineering</h3>
+          <p>Strong foundation in power systems, robotics, and embedded systems.</p>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center mb-6">
-                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mr-3">
-                            <i class="fas fa-graduation-cap text-white"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-lg">UCET</h3>
-                            <p class="text-xs text-gray-400">Engineering Excellence</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 mb-6">
-                        Premier institution for engineering education and innovation since 2009.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div>
-                    <h4 class="font-semibold text-lg mb-6">Quick Links</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Admissions</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Academic Calendar</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Campus Map</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Alumni</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-semibold text-lg mb-6">Programs</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Computer Science</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Electronics and communication Engineering</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Mechanical Engineering</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Information tecnology</a></li>
-                        
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-semibold text-lg mb-6">Resources</h4>
-                    <ul class="space-y-3">
-                        <li>
-                            <a href="https://drive.google.com/drive/folders/1SwqP36wQvIXvF6zI9IxnYVTt3lL_nclr" class="text-gray-400 hover:text-white transition-colors">Library</a>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Research</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Student Portal</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Faculty Resources</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Campus Safety</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
-                <p class="text-gray-400">
-                    © 2025 University College of Engineering and Technology. All rights reserved.
-                </p>
-            </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">Mechanical Engineering</h3>
+          <p>Innovative design, manufacturing, and sustainable energy solutions.</p>
         </div>
-    </footer>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">Information Technology</h3>
+          <p>Specialization in networks, cloud computing, and software engineering.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">AI & ML</h3>
+          <p>Advanced studies in artificial intelligence, machine learning, and data analytics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- JavaScript -->
-    <script src="script.js">
-        
-   
-    </script>
+  <!-- Resources Section -->
+  <section id="resources" class="py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Resources</h2>
+      <div class="grid gap-8 md:grid-cols-3 text-center">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">Library</h3>
+          <p>Access to thousands of books, journals, and e-resources.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">Labs</h3>
+          <p>State-of-the-art laboratories for research and development.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">NPTEL/SWAYAM</h3>
+          <p>Online learning and certification from premier institutions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- News Section -->
+  <section id="news" class="p-6">
+    <h2 class="text-2xl font-bold mb-4 text-blue-900">Latest News</h2>
+    <div id="newsContainer" class="space-y-4">
+      <!-- Dynamic news will load here -->
+    </div>
+  </section>
+
+  <!-- Resources Section -->
+  <section id="resources" class="p-6 bg-gray-50">
+    <h2 class="text-2xl font-bold mb-4 text-blue-900">Resources</h2>
+    <div id="resourcesContainer" class="space-y-4">
+      <!-- Dynamic resources will load here -->
+    </div>
+  </section>
+
+<!-- Resources Section -->
+<section id="resources" class="py-12">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-6 text-center">Resources</h2>
+    <div id="resources-section"></div>
+  </div>
+</section>
+
+
+
+
+
+  <!-- Alumni Section -->
+  <section id="alumni" class="py-16 bg-gray-100 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">Alumni</h2>
+      <p class="text-lg leading-relaxed mb-6">
+        Our alumni are working across the globe in leading organizations and research institutions.
+      </p>
+      <a href="login.html" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Alumni Login</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-6 text-center">
+    <p>&copy; 2025 University College of Engineering and Technology. All rights reserved.</p>
+  </footer>
+  <script defer src="script.js"></script>
+
 </body>
 </html>
-

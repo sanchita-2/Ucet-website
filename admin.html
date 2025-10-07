@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | UCET</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <h1>UCET Admin Dashboard</h1>
+    <button class="btn" id="logoutBtn">Logout</button>
+  </div>
+
+  <div class="dashboard">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <ul>
+        <li><a href="#newsSection">📰 Manage News</a></li>
+        <li><a href="#resourcesSection">📚 Manage Resources</a></li>
+        <li><a href="#usersSection">👥 Manage Users</a></li>
+      </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <!-- NEWS -->
+      <section id="newsSection">
+        <h2>📰 News</h2>
+        <form id="newsForm">
+          <input type="text" id="newsTitle" placeholder="News Title" required>
+          <textarea id="newsContent" placeholder="News Content" required></textarea>
+          <button type="submit">Add News</button>
+        </form>
+        <ul id="newsList" class="list"></ul>
+      </section>
+
+      <!-- RESOURCES -->
+      <section id="resourcesSection">
+        <h2>📚 Resources</h2>
+        <form id="resourceForm">
+          <input type="text" id="resourceTitle" placeholder="Resource Title" required>
+          <input type="url" id="resourceLink" placeholder="Resource Link" required>
+          <button type="submit">Add Resource</button>
+        </form>
+        <ul id="resourceList" class="list"></ul>
+      </section>
+
+      <!-- USERS -->
+      <section id="usersSection">
+        <h2>👥 Users</h2>
+        <p>Registered Users:</p>
+        <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+          <thead class="bg-gray-200">
+            <tr>
+              <th class="py-3 px-4 text-left">ID</th>
+              <th class="py-3 px-4 text-left">Name</th>
+              <th class="py-3 px-4 text-left">Email</th>
+              <th class="py-3 px-4 text-left">Role</th>
+            </tr>
+          </thead>
+          <tbody id="userTableBody"></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <!-- Use the main script.js for all logic -->
+  <script src="script.js"></script>
+  <!-- If you want separate admin.js, ensure it's loaded AFTER script.js or contains all necessary functions -->
+  <!-- <script src="admin.js"></script> -->
+</body>
+</html>
