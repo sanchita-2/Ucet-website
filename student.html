@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCET - Student Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+
+  <!-- Navbar -->
+  <header class="bg-white dark:bg-gray-800 shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
+      <h1 class="text-xl font-bold text-blue-900 dark:text-white">UCET Student Dashboard</h1>
+      <div class="flex items-center space-x-4">
+        <button id="theme-toggle" class="px-3 py-1 rounded bg-gray-200 dark:bg-gray-700">🌙</button>
+        <a href="index.html" class="px-3 py-1 bg-red-600 text-white rounded">Logout</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="max-w-6xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold mb-6">Welcome, Student</h2>
+    <div class="grid gap-6 md:grid-cols-2">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded shadow">
+        <h3 class="font-semibold mb-3">Your Courses</h3>
+        <ul class="list-disc ml-5">
+          <li>Data Structures</li>
+          <li>Artificial Intelligence</li>
+          <li>Database Systems</li>
+        </ul>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded shadow">
+        <h3 class="font-semibold mb-3">Announcements</h3>
+        <p>Mid-term exams will begin from 20th October 2025. Please check the schedule.</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
